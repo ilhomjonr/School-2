@@ -1,0 +1,52 @@
+// Section & Block - Check certificate
+
+.section-check-certificate {
+    padding: 0;
+}
+
+.check-certificate {
+    padding: 90px 30px;
+    background-color: rgba($light, 0.08);
+    @include radius(25px);
+
+    @include media-breakpoint-down(md) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    &__form {
+        width: 100%;
+        max-width: 650px;
+        margin: 0 auto;
+        position: relative;
+
+        form {
+            width: 100%;
+        }
+
+        input[type="text"] {
+            height: 50px;
+            padding: 0 24px;
+            font-size: 18px;
+            background-color: #FFF;
+
+            @include media-breakpoint-down(md) {
+                text-align: center;
+            }
+        }
+
+        .btn {
+
+            @include media-breakpoint-up(lg) {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+            @include media-breakpoint-down(md) {
+                display: block;
+                margin: 20px auto 0;
+            }
+        }
+    }
+}

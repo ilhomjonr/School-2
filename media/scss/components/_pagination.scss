@@ -1,0 +1,49 @@
+// Component - Pagination
+
+.pagination {
+    display: flex;
+    justify-content: center;
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -10px;
+        padding: 0;
+        list-style: none;
+
+        li {
+            margin: 10px;
+
+            a, span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                min-width: 40px;
+                height: 40px;
+                min-height: 40px;
+                border: 1px solid rgba($light, 0.1);
+                color: $secondary;
+                @include radius(8px);
+            }
+
+            a:hover {
+                text-decoration: none;
+                border-color: rgba($primary, 0.1);
+                background-color: rgba($primary, 0.1);
+            }
+
+            span {
+                pointer-events: none;
+                cursor: auto;
+                border-color: rgba($primary, 0.1);
+                background-color: rgba($primary, 0.1);
+            }
+
+            .icon {
+                color: #8e91ab;
+                font-size: 10px;
+            }
+        }
+    }
+}

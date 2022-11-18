@@ -1,0 +1,109 @@
+// Section & Block - Dashboard
+
+.section-dashboard {
+    overflow: hidden;
+    background-color: #F5F5F5;
+}
+
+.dashboard-left {
+
+    @include media-breakpoint-up(lg) {
+        position: relative;
+        height: 100%;
+        padding: 20px 0 30px 0;
+        background-color: #FFF;
+
+        &:before {
+            content: '';
+            height: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: -4000px;
+            background-color: #FFF;
+        }
+    }
+
+    &.left-sidebar-menu {
+
+        @include media-breakpoint-down(md) {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    }
+
+    &__inner {
+
+        @include media-breakpoint-up(lg) {
+            position: relative;
+        }
+    }
+}
+
+.dashboard-right {
+    padding: 20px 0 90px 0;
+}
+
+.dashboard-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            color: $secondary;
+            font-size: 16px;
+            font-weight: 500;
+            @include transition();
+
+            .icon {
+                width: 16px;
+                min-width: 16px;
+                margin-right: 10px;
+                color: $light;
+                @include transition();
+            }
+
+            &:hover, &:focus {
+                color: $primary;
+                text-decoration: none;
+
+                .icon {
+                    color: $primary;
+                }
+            }
+        }
+
+        &.active {
+
+            a {
+                color: $primary;
+
+                .icon {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+.dashboard-title {
+    margin-bottom: 20px;
+
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+    }
+}
+
+.dashboard-buttons {
+    display: flex;
+    justify-content: space-between;
+}

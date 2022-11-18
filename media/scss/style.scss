@@ -1,0 +1,64 @@
+// Mixins
+@import 'mixins/crossbrowser';
+
+// Configurations
+@import 'config/variables';
+@import 'config/bootstrap';
+@import 'config/fonts';
+@import 'config/icons';
+@import 'config/type';
+
+// Plugins
+@import 'plugins/bootstrap/bootstrap';
+@import 'plugins/owlcarousel/owl.carousel';
+@import 'plugins/videojs/video-js';
+
+// Base
+@import 'base/base';
+@import 'base/type';
+@import 'base/header';
+@import 'base/main';
+@import 'base/footer';
+
+// Components
+@import 'components/breadcrumbs';
+@import 'components/titles';
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/owl-carousel';
+@import 'components/pagination';
+@import 'components/progress-bar';
+@import 'components/card';
+@import 'components/modal';
+@import 'components/form-styler';
+@import 'components/ratings';
+@import 'components/popout-buttons';
+@import 'components/video';
+
+// Sections & Blocks
+@import 'sections-blocks/intro';
+@import 'sections-blocks/learners';
+@import 'sections-blocks/features';
+@import 'sections-blocks/check-certificate';
+@import 'sections-blocks/filter';
+@import 'sections-blocks/courses';
+@import 'sections-blocks/webinars';
+@import 'sections-blocks/teachers';
+@import 'sections-blocks/call-to-action';
+@import 'sections-blocks/breadcrumbs';
+@import 'sections-blocks/chat';
+@import 'sections-blocks/qualifications.scss';
+@import 'sections-blocks/notifications';
+@import 'sections-blocks/dashboard';
+@import 'sections-blocks/settings';
+@import 'sections-blocks/statistics';
+@import 'sections-blocks/requalification';
+@import 'sections-blocks/certificates';
+@import 'sections-blocks/payments';
+@import 'sections-blocks/course-test';
+@import 'sections-blocks/left-sidebar-menu';
+@import 'sections-blocks/right-sidebar-menu';
+@import 'sections-blocks/authors';
+@import 'sections-blocks/sortable';
+
+

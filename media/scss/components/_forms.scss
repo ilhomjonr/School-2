@@ -1,0 +1,64 @@
+// Component - Forms
+
+label {
+    display: block;
+    font-size: 13px;
+}
+
+textarea.form-control {
+    min-height: 90px;
+}
+
+.custom-select {
+    background-size: 10px;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+        -ms-appearance: none;
+         -o-appearance: none;
+            appearance: none;
+}
+
+input[type="password"] {
+    color: $light !important;
+    letter-spacing: 4px;
+}
+
+.password-field-wrapper {
+    position: relative;
+
+    .show-password {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0;
+        height: 40px;
+        width: 45px;
+        font-size: 14px;
+        color: rgba($light, 0.5);
+    }
+}
+
+.filter-course-rating {
+
+    option[value="1"] {
+        background-image:url('#{$path-images}/rating/filter-rate-1.png');
+    }
+}
+
+@include media-breakpoint-up(xl) {
+
+    .fit-content-form-group {
+        display: flex;
+
+        .form-group {
+
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+        }
+
+        .form-control {
+            width: fit-content;
+        }
+    }
+}

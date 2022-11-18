@@ -1,0 +1,29 @@
+// Section & Block - Right sidebar menu
+
+.right-sidebar-menu {
+    position: fixed;
+    top: 90px;
+    right: 0;
+    z-index: 9;
+    width: 600px;
+    height: calc(100vh - 90px);
+    padding: 30px 24px;
+    overflow-y: scroll;
+    background-color: #FFF;
+    @include translateX(600px);
+    @include transition();
+
+    @include media-breakpoint-down(md) {
+        top: 72px;
+        height: calc(100vh - 72px);
+    }
+
+    @include media-breakpoint-down(md) {
+        width: 300px;
+        @include translateX(300px);
+    }
+
+    &.opened {
+        @include translateX(0);
+    }
+}

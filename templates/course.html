@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <link rel="icon" href="images/assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/assets/favicon/apple-touch-icon-180x180.png"> -->
+    <title>course</title>
+    <link rel="stylesheet" type="text/css" href="/media/css/all.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/media/./css/style.css" />
+    <style>
+      body {
+        background-image: linear-gradient(pink, orange, red);
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="container nav__container">
+        <a href="/"><h4>ICOS</h4></a>
+        <ul class="nav__menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="courses">Courses</a></li>
+          <li><a href="news">News</a></li>
+          <li><a href="about#teachers">Teachers</a></li>
+          <li><a href="contact">Contact</a></li>
+          <li><a href="grand">Grand</a></li>
+        </ul>
+        <div class="btn_navbar">
+          {% if request.user.is_authenticated %}
+           <li class="btn_navbar">{{user.username}}</li><a class="btn_navbar" href="logout"> <button>Log out</button></a>
+           {%else%}
+           <a class="btn_navbar" href="login"> <button>Log in</button></a>
+           <a class="btn_navbar" href="register"> <button>Sign up</button></a>
+           {%endif%}
+        </div>
+        <!-- <div class="profile-icon">
+          <a href=""><i class="fa-solid fa-user"></i></a>
+        </div> -->
+        <div class="burger_menu">
+          <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+          <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <main class="main">
+      <section class="section section-breadcrumbs">
+        <div class="container">
+          <div class="breadcrumbs">
+            <button type="button" class="btn btn-light left-sidebar-menu-btn">
+              <span> <i class="fa-solid fa-list"></i> </span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-course pt-3">
+        {%for c in courses %}
+        <div class="container">
+          <h3 class="mb-4">
+            {{c.name}}
+          </h3>
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="course-single__sidebar left-sidebar-menu">
+                <div class="left-sidebar-menu__inner">
+                  <div class="course-single__info">
+                    <ul>
+                      <li>
+                        <span>Price</span>
+                        <span>{{c.price}} som</span>
+                      </li>
+                    </ul>
+                    <button
+                      type="button"
+                      class="btn btn-primary px-2 mt-2 w-100"
+                    >
+                      Купить курс
+                    </button>
+                  </div>
+                  <div class="course-single__menu">
+                    <h6>Глава 1</h6>
+                    <ul>
+                      <li>
+                        <a href="#"
+                          ><span><i class="fa-solid fa-play"></i></span
+                          >Концепция воспринимаемой ценности</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><span><i class="fa-solid fa-play"></i></span>Теория
+                          дифференциации на практике</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><span><i class="fa-solid fa-lock"></i></span>Теория
+                          массового маркетинга</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><span><i class="fa-solid fa-lock"></i></span
+                          >Концепция холистического маркетинга</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><span><i class="fa-solid fa-lock"></i></span
+                          >Использование модели Портера — Лоулера</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><span><i class="fa-solid fa-lock"></i></span
+                          >Должностная инструкция маркетолога</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><span><i class="fa-solid fa-lock"></i></span>Основные
+                          KPI менеджера по маркетингу</a
+                        >
+                      </li>
+                    </ul>
+                    <h6>Глава 2</h6>
+                    <ul>
+                      <li>
+                        <a href="#"
+                          ><span><i class="fa-solid fa-lock"></i></span
+                          >Концепция воспринимаемой ценности</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><span><i class="fa-solid fa-lock"></i></span>Теория
+                          дифференциации на практике</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><span><i class="fa-solid fa-lock"></i></span>Теория
+                          массового маркетинга</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><span><i class="fa-solid fa-lock"></i></span
+                          >Концепция холистического маркетинга</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><span><i class="fa-solid fa-lock"></i></span
+                          >Использование модели Портера — Лоулера</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><span><i class="fa-solid fa-lock"></i></span
+                          >Должностная инструкция маркетолога</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><span><i class="fa-solid fa-lock"></i></span>Основные
+                          KPI менеджера по маркетингу</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-9">
+              <div class="course-single__content">
+                <div class="video mb-4">
+                  <video
+                    id="my-video"
+                    class="video-js"
+                    controls
+                    preload="auto"
+                    poster="images/video-img.jpg"
+                    data-setup="{}"
+                  >
+                    <source src="/media/{{c.video}}" type="video/mp4" />
+                    <source src="/media/{{c.video}}" type="video/webm" />
+                  </video>
+                </div>
+                <h3 class="mb-3">О чем этот курс?</h3>
+                <p>
+                 {{c.desc}}
+                </p>
+              </div>
+              <div class="btn_navbar">
+                <a class="btn_navbar" href="/course-test/{{c.id}}"> <button>Test</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {%endfor%}
+      </section>
+    </main>
+
+    <!-- Footer -->
+
+    <footer>
+      <div class="container footer__container">
+        <div class="footer__1">
+          <a href="index.html" class="footer__logo"><h4>ICOS</h4></a>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+            ipsum nobis ratione.
+          </p>
+        </div>
+
+        <div class="footer__2">
+          <h4>Permalinks</h4>
+          <ul class="permalinks">
+            <li><a href="/">Home</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="course">Courses</a></li>
+            <li><a href="contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__3">
+          <h4>Primacy</h4>
+          <ul class="privacy">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms and conditions</a></li>
+            <li><a href="#">Refund Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__4">
+          <h4>Contact Us</h4>
+          <div>
+            <p>+01 234 567 8910</p>
+            <p>shakir260@gmail.com</p>
+          </div>
+
+          <ul class="footer__socials">
+            <li>
+              <a href="#"><i class="uil uil-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="uil uil-instagram-alt"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="uil uil-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="uil uil-linkedin-alt"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="/media/./main.js"></script>
+    <script src="/media/./js/jquery.min.js"></script>
+    <script src="/media/./js/plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="/media/./js/plugins/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/media/./js/plugins/videojs/video.js"></script>
+    <script src="/media/./js/main.js"></script>
+  </body>
+</html>

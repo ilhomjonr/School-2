@@ -1,0 +1,86 @@
+// Section & Block - Call to action
+
+.section-call-to-action {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+    background-color: rgba($light, 0.06);
+
+    @include media-breakpoint-down(lg) {
+        background-position: right -80% center;
+    }
+
+    @include media-breakpoint-down(md) {
+        background-image: none !important;
+    }
+
+    &__inner {
+        width: 54%;
+
+        @include media-breakpoint-down(lg) {
+            width: 67%;
+        }
+
+        @include media-breakpoint-down(md) {
+            width: 100%;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+    
+        p {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.cta-participants {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+    ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            min-width: 50px;
+            height: 50px;
+            min-height: 50px;
+            border: 2px solid #FFF;
+            background-color: $secondary;
+            overflow: hidden;
+            @include radius(50%);
+
+            &:not(:first-child) {
+                margin-left: -15px;
+            }
+
+            img {
+                width: 48px;
+                height: 48px;
+                object-fit: cover;
+            }
+
+            span {
+                font-size: 14px;
+                font-weight: bold;
+                color: #FFF;
+            }
+        }
+    }
+
+    strong {
+        color: $secondary;
+        margin-left: 12px;
+    }
+}

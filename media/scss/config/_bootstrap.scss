@@ -1,0 +1,145 @@
+// Theming - Bootstrap (Theming)
+
+// Colors
+$theme-colors: (
+	"primary": 							$primary,
+
+	"secondary":						$secondary,
+	"secondary-light":					$secondary-light,
+
+	"success": 							$success,
+	"dark":								$dark,
+
+	"danger":                           $danger,
+	"danger-light": 					$danger-light,
+
+	"light":                            $light,
+	"lighter":							$lighter,
+	"lightest":							$lightest,
+
+	"white":							$white,
+	"whiter":							$whiter,
+);
+
+// Container width
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1200px
+);
+
+// Body
+$font-size-base: 		  				1rem;
+$body-color:              				$body-color;
+$font-family-base: 		  				$font-family-base;
+$body-bg: 								$body-bg;
+
+// Reboot
+$font-weight-bolder:					500;
+
+// Headings
+$headings-color:              			$secondary;
+$headings-font-weight:        			700;
+
+$h1-font-size:                			2.25rem;  // 36px
+$h2-font-size:                			2rem; 	  // 32px
+$h3-font-size:                			1.5rem;   // 24px
+$h4-font-size:                			1.25rem;  // 20px
+$h5-font-size:                			1.125rem; // 18px
+$h6-font-size:                			1rem; 	  // 16px
+
+// Borders
+$border-color:                			#D9D9D9;
+
+// Forms
+$label-margin-bottom:                   6px;
+$form-group-margin-bottom:              25px;
+$input-border-width:                    0;
+$input-bg:                              #f6f6f8;
+$input-color:							#2b2b2b;
+$input-font-weight:                     500;
+$input-border-color:                    $color-border;
+$input-placeholder-color:	 			#898DA6;
+$input-font-size:                       14px;
+$input-color:                           $secondary;
+
+// Buttons
+$btn-padding-y:            				14px;
+$btn-padding-x:            				24px;
+$btn-font-size:            				18px;
+$btn-font-weight:             			bold;
+$btn-line-height:          				18px;
+$btn-disabled-opacity:        			0.4;
+
+$btn-padding-y-sm:            			9px;
+$btn-padding-x-sm:            			24px;
+$btn-font-size-sm:            			16px;
+$btn-line-height-sm:          			18px;
+
+$btn-border-radius:           			8px;
+$btn-border-radius-sm:        			8px;
+// $btn-border-radius-lg:        			8px;
+
+// Form input
+$input-btn-padding-y:         			0.5941rem;
+$input-btn-padding-x:         			1rem;
+$input-font-size:                       14px;
+$input-font-weight:                     500;
+$input-border-radius:                   8px;
+$input-btn-border-width:      			2px;
+
+// Custom select
+$custom-select-indicator:           	url("#{$path-images}/icons/custom-select-arrow.svg");
+$custom-select-border-radius:       	8px;
+
+// Modals
+$modal-inner-padding:               	100px;
+$modal-footer-margin-between:       	50px;
+$modal-md:                          	570px;
+$modal-backdrop-opacity:            	0.5;
+$modal-content-border-width:        	0;
+$modal-content-border-radius:       	10px;
+$modal-header-border-width:         	0;
+$modal-header-padding-y:            	24px;
+$modal-header-padding-x:            	100px;
+
+// Spacing
+$spacer: 								5px;
+$spacers: ();
+$spacers: map-merge(
+	(
+		0: 0,
+		1: $spacer,
+		2: ($spacer * 2),
+		3: ($spacer * 3),
+		4: ($spacer * 4),
+		5: ($spacer * 5),
+		6: ($spacer * 6),
+		7: ($spacer * 7),
+		8: ($spacer * 8),
+		9: ($spacer * 9),
+		10: ($spacer * 10),
+	),
+  	$spacers
+);
+
+// Progress bars
+$progress-height:                   	6px;
+$progress-bg:                       	rgba($light, 0.15);
+
+// Cards
+$card-spacer-y:                     	21.5px;
+$card-spacer-x:                     	24px;
+$card-border-width:                 	0;
+$card-border-radius:                	10px;
+
+// Dropdown
+$dropdown-padding-y:                	0;
+$dropdown-spacer:                   	3px;
+$dropdown-border-radius:            	8px;
+$dropdown-border-width:             	0;
+$dropdown-item-padding-y:           	12px;
+$dropdown-item-padding-x:           	16px;
+$dropdown-link-color:               	$secondary;
+$dropdown-link-active-bg:           	transparent;

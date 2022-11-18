@@ -1,0 +1,92 @@
+// Section & Block - Dashboard Payments
+
+.payment {
+    margin-bottom: 24px;
+
+    .card-body {
+        display: flex;
+    }
+
+    .row {
+        width: calc(100% + 20px);
+        margin: 0 -10px;
+
+        .col {
+            display: flex;
+            flex-direction: column;
+            padding: 0 10px;
+
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+                flex: 0 0 100%;
+                
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+            }
+
+            span {
+                font-size: 15px;
+                font-weight: 500;
+                margin-bottom: 8px;
+
+                @include media-breakpoint-down(sm) {
+                    margin-bottom: 0;
+                }
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    &__logo {
+        width: 13%;
+        flex: 0 0 13%;
+
+        @include media-breakpoint-down(lg) {
+            width: 16%;
+            flex: 0 0 16%;
+        }
+
+        img {
+            width: 80px;
+            height: auto;
+
+            @include media-breakpoint-down(sm) {
+                margin-top: 8px;
+            }
+        }
+    }
+
+    &__category {
+        width: 47%;
+        flex: 0 0 47%;
+
+        @include media-breakpoint-down(lg) {
+            width: 38%;
+            flex: 0 0 38%;
+        }
+    }
+
+    &__date {
+        width: 20%;
+        flex: 0 0 20%;
+
+        @include media-breakpoint-down(lg) {
+            width: 23%;
+            flex: 0 0 23%;
+        }
+    }
+
+    &__value {
+        width: 20%;
+        flex: 0 0 20%;
+
+        @include media-breakpoint-down(lg) {
+            width: 23%;
+            flex: 0 0 23%;
+        }
+    }
+}

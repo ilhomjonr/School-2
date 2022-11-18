@@ -1,0 +1,45 @@
+// Section & Block - Search Filter
+
+.filter {
+    padding: 25px 25px 20px 25px;
+    margin-bottom: 50px;
+    background-color: rgba($light, 0.06);
+    @include radius(15px);
+
+    &__column {
+
+        @include media-breakpoint-up(xl) {
+            flex: 0 0 calc((100% - 340px) / 4);
+            min-width: calc((100% - 340px) / 4);
+
+            &:first-child {
+                flex: 0 0 340px;
+                max-width: 340px;
+            }
+        }
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    select {
+        background-color: #FFF;
+    }
+
+    .dropdown {
+
+        .dropdown-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 100px;
+        }
+    }
+}

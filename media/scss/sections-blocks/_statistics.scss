@@ -1,0 +1,100 @@
+// Section & Block - Dashboard Statistics
+
+.statistics-top {
+
+    & > [class^="col-"] {
+
+        .card {
+            position: relative;
+            overflow: hidden;
+
+            .card-body {
+                position: relative;
+                z-index: 1;
+                padding-top: 17px;
+            }
+        
+            h3 {
+                font-size: 27.5px;
+                font-weight: bold;
+                line-height: 35px;
+                margin-bottom: 10px;
+            }
+        
+            p {
+                color: $secondary;
+                font-size: 15px;
+                font-weight: 500;
+                margin-bottom: 0;
+            }
+
+            &:after {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 97px;
+                height: 97px;
+                padding: 10px;
+                position: absolute;
+                bottom: -34px;
+                right: -15px;
+                @include radius(50%);
+
+                content: "\e909";
+                font-family: 'icomoon';
+                font-size: 48px;
+            }
+        }
+
+        &:nth-child(1) .card:after {
+            color: rgba(#26CAAC, 0.3);
+            background-color: rgba(#26CAAC, 0.15);
+        }
+
+        &:nth-child(2) .card:after {
+            color: rgba(#F2994A, 0.3);
+            background-color: rgba(#F2994A, 0.15);
+        }
+
+        &:nth-child(3) .card:after {
+            color: rgba(#2F80ED, 0.3);
+            background-color: rgba(#2F80ED, 0.15);
+        }
+    }
+}
+
+.statistics-graph {
+
+    &__info {
+        text-align: center;
+
+        p {
+            color: $secondary;
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+    
+        small {
+            display: block;
+            color: $light;
+            font-size: 14px;
+            line-height: 19px;
+        }
+    }
+
+    &__chart {
+        
+        canvas {
+            margin: 0 auto;
+        }
+
+        #chart_1 {
+            // height: 150px !important;
+        }
+
+        #chart_1 {
+            
+        }
+    }
+}

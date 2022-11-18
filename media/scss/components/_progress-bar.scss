@@ -1,0 +1,70 @@
+// Component - Progress bar
+
+.progress {
+
+    .progress-bar {
+        border-radius: $progress-border-radius;
+    }
+}
+
+.circle-progress-bar {
+    display: inline-block;
+    position: relative;
+
+    svg {
+        width: 68px;
+        height: 68px;
+    }
+
+    .bg {
+        fill: none;
+        stroke-width: 6px;
+        stroke: #e5e6e9;
+    }
+
+    .progress {
+        fill: none;
+        stroke: $primary;
+        stroke-linecap: round;
+        transform: rotate(-90deg);
+        transform-origin: 50% 50%;
+
+        stroke-width: 6px;
+        stroke-dasharray: 195;
+    }
+
+    .text {
+        position: absolute;
+        width: 100%;
+        top: calc(50% - 9px);
+        margin-top: -2px;
+        font-size: 18px;
+        text-align: center;
+        font-weight: 500;
+        line-height: 1;
+        color: #000;
+    }
+
+    &.big {
+
+        svg {
+            width: 130px;
+            height: 130px;
+        }
+
+        .bg {
+            stroke-width: 9px;
+        }
+
+        .progress {
+            stroke-width: 9px;
+            stroke-dasharray: 378;
+        }
+
+        .text {
+            top: calc(50% - 9px);
+            margin-top: -4px;
+            font-size: 24px;
+        }
+    }
+}

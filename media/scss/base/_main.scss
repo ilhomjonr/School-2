@@ -1,0 +1,64 @@
+// Base - Main
+
+.main {
+    padding-top: 90px;
+
+    @include media-breakpoint-down(md) {
+        padding-top: 70px;
+    }
+}
+
+.section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+
+    &--min {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+.row {
+
+    &--min {
+        margin-left: -10px;
+        margin-right: -10px;
+
+        & > [class^="col-"] {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    &--min-8 {
+        margin-left: -8px;
+        margin-right: -8px;
+
+        & > [class^="col-"] {
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+    }
+
+    &.row-dashboard-sidebar {
+
+        & > [class^="col-"] {
+    
+            &:first-child {
+    
+                @include media-breakpoint-up(xl) {
+                    flex: 0 0 70%;
+                    max-width: 70%;
+                }
+            }
+    
+            &:last-child {
+    
+                @include media-breakpoint-up(xl) {
+                    flex: 0 0 30%;
+                    max-width: 30%;
+                }
+            }
+        }
+    }
+}

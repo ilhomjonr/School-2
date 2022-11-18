@@ -1,0 +1,205 @@
+// Section & Block - Dashboard Author's
+
+.new-course__top-buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+
+    & > .btn,
+    & > .dropdown {
+        margin-bottom: 15px;
+
+        @include media-breakpoint-down(xs) {
+            width: 100%;
+        }
+    }
+
+    .btn .icon-plus {
+        font-size: 13px;
+    }
+}
+
+.new-lesson__top-buttons {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+
+    .dropdown {
+
+        @include media-breakpoint-up(xl) {
+            width: 100%;
+            max-width: 246px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
+
+            @include media-breakpoint-up(xl) {
+                width: 100%;
+                max-width: 246px;
+            }
+
+            &:after {
+                margin-top: 4px;
+            }
+        }
+    }
+
+    .tab {
+
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+            flex-direction: column;
+        }
+
+        li {
+
+            &:not(:last-child) {
+                margin-right: 32px;
+
+                @include media-breakpoint-down(lg) {
+                    margin-right: 10px;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    margin-right: 0;
+                }
+
+                &:not(:last-child) {
+
+                    @include media-breakpoint-down(sm) {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+
+            .btn {
+
+                @include media-breakpoint-down(lg) {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    width: 100%;
+                    padding: 10px;
+                }
+
+                &.active {
+                    color: #FFF;
+                    border-color: $primary;
+                    background-color: $primary;
+                    box-shadow: none !important;
+                }
+            }
+        }
+    }
+}
+
+.new-lesson {
+    margin-bottom: 25px;
+
+    .card-body {
+
+        @include media-breakpoint-up(xl) {
+            padding-right: 60px;
+        }
+    }
+
+    &__tab-content {
+
+        .column {
+            flex: 0 0 73%;
+            max-width: 73%;
+
+            @include media-breakpoint-down(lg) {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        &--test {
+
+            .column-1 {
+                flex: 0 0 80%;
+                max-width: 80%;
+    
+                @include media-breakpoint-down(lg) {
+                    flex: 0 0 80%;
+                    max-width: 80%;
+                }
+    
+                @include media-breakpoint-down(sm) {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
+            }
+    
+            .column-2 {
+                flex: 0 0 20%;
+                max-width: 20%;
+    
+                @include media-breakpoint-down(lg) {
+                    flex: 0 0 20%;
+                    max-width: 20%;
+                }
+    
+                @include media-breakpoint-down(sm) {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    margin-top: 25px;
+                }
+            }
+        }
+    }
+}
+
+.authors-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: center;
+    opacity: 0.3;
+
+    // Margins
+    &.mt-big {
+        margin-top: 180px;
+    }
+
+    &.mt-small {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    &__icon {
+        display: block;
+        width: 106px;
+        min-width: 106px;
+        height: 106px;
+        min-height: 106px;
+        margin-bottom: 35px;
+        background-position: center;
+        background-size: 106px;
+        background-repeat: no-repeat;
+        background-image: url('#{$path-images}/icons/empty.svg');
+    }
+
+    &__message {
+        font-weight: 500;
+        line-height: 22px;
+    }
+}

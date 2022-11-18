@@ -1,0 +1,53 @@
+// Transition All
+@mixin transition ($sec : 0.3s) {
+    -webkit-transition: all $sec;
+       -moz-transition: all $sec;
+        -ms-transition: all $sec;
+         -o-transition: all $sec;
+            transition: all $sec;
+}
+
+// Border radius
+@mixin radius ($radius) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+         -o-border-radius: $radius;
+            border-radius: $radius;
+}
+
+// Transform rotate
+@mixin rotate ($deg) {
+    -webkit-transform: rotate($deg);
+       -moz-transform: rotate($deg);
+        -ms-transform: rotate($deg);
+         -o-transform: rotate($deg);
+            transform: rotate($deg);
+}
+
+// Transform scale
+@mixin scale ($value-x, $value-y) {
+    -webkit-transform: scale($value-x, $value-y);
+       -moz-transform: scale($value-x, $value-y);
+        -ms-transform: scale($value-x, $value-y);
+         -o-transform: scale($value-x, $value-y);
+            transform: scale($value-x, $value-y);
+}
+
+// Transform translate X
+@mixin translateX ($value) {
+    -webkit-transform: translateX($value);
+       -moz-transform: translateX($value);
+        -ms-transform: translateX($value);
+         -o-transform: translateX($value);
+            transform: translateX($value);
+}
+
+// Transform origin
+@mixin transform-origin ($value-x, $value-y) {
+    -webkit-transform-origin: $value-x $value-y;
+       -moz-transform-origin: $value-x $value-y;
+        -ms-transform-origin: $value-x $value-y;
+         -o-transform-origin: $value-x $value-y;
+            transform-origin: $value-x $value-y;
+}

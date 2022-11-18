@@ -1,0 +1,48 @@
+.newss {
+  margin-top: 0rem;
+}
+
+.news__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.news {
+  background: var(--color-bg1);
+  text-align: center;
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+
+.news:hover {
+  background: transparent;
+  border-color: var(--color-primary1);
+}
+
+.news__info {
+  padding: 2rem;
+}
+
+.news__info p {
+  margin: 1.2rem 0 2rem;
+  font-size: 0.9rem;
+}
+@media screen and (max-width: 1024px) {
+  /* ====================== POPULAR COURSES ===================== */
+  .newss {
+    margin-top: 0;
+  }
+
+  .news__container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ======================== MEDIA QUERIES (PHONES) ======================= */
+@media screen and (max-width: 600px) {
+  /* ====================== POPULAR COURSES ===================== */
+  .news__container {
+    grid-template-columns: 1fr;
+  }
+}

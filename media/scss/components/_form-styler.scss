@@ -1,0 +1,346 @@
+// Component - Form styler
+
+// Toggle switch buttons
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 28px;
+    margin: 0;
+
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+
+        &:checked + .slider {
+            background-color: $primary;
+        }
+        
+        &:checked + .slider:before {
+            @include translateX(17px);
+        }
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $light;
+        @include transition(0.2s);
+        @include radius(34px);
+
+        &:before {
+            position: absolute;
+            content: "";
+            height: 17px;
+            width: 17px;
+            left: 7px;
+            bottom: 6px;
+            background-color: #FFF;
+            @include transition(0.2s);
+            @include radius(50%);
+        }
+    }
+}
+
+.switch-text {
+    display: inline-block;
+    position: relative;
+    width: auto;
+    height: 40px;
+    margin: 0;
+
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        position: absolute;
+        
+        &:checked + .slider:before {
+            @include translateX(100%);
+        }
+        
+        &:checked + .slider + .switch-labels .switch-label {
+
+            &:first-child {
+                color: $light;
+            }
+
+            &:last-child {
+                color: #FFF;
+            }
+        }
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba($light, 0.2);
+        @include transition(0.2s);
+        @include radius(8px);
+
+        &:before {
+            position: absolute;
+            content: "";
+            height: 36px;
+            width: calc(50% - 2px);
+            left: 2px;
+            top: 2px;
+            background-color: $primary;
+            @include transition(0.2s);
+            @include radius(8px);
+        }
+    }
+
+    .switch-labels {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 100%; 
+
+        .switch-label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        
+            position: relative;
+            z-index: 1;
+            padding: 0 13px;
+            white-space: nowrap;
+
+            text-align: center;
+            color: $light;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            @include transition(0.2s);
+
+            &:first-child {
+                color: #FFF;
+            }
+        }
+    }
+}
+
+// Custom File
+.custom-file {
+    position: relative;
+    height: 40px;
+
+    input[type="file"] {
+        opacity: 0;
+        position: relative;
+        z-index: 1;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 40px;
+        padding: 0 16px;
+        background-color: rgba(#898DA6, 0.08);
+        
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1;
+        color: $secondary;
+        @include radius(8px);
+
+        &:before {
+            content: "\e922";
+            font-family: 'icomoon';
+            color: $light;
+            margin-right: 6px;
+        }
+    }
+}
+
+// Checkbox and Radio
+.checkbox-custom,
+.radio-custom {
+    display: block;
+    min-height: 16px;
+    min-width: 16px;
+    position: relative;
+    padding-left: 24px;
+    margin: 0;
+    color: $light;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    &:hover {
+
+        input {
+
+            & ~ .checkmark {
+                background-color: rgba($light, 0.08);
+            }
+        }
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 16px;
+        width: 16px;
+        border: 1px solid $light;
+        @include radius(4px);
+
+        &:after {
+            display: none;
+            content: "";
+            position: absolute;
+            left: calc(50% - 5px);
+            top: calc(50% - 5px);
+            width: 10px;
+            height: 10px;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url('#{$path-images}/icons/input-check.svg');
+        }
+    }
+
+    input {
+        position: absolute;
+        opacity: 0;
+        height: 0;
+        width: 0;
+
+        &:checked {
+
+            & ~ .checkmark {
+                border-color: $primary;
+                background-color: $primary;
+
+                &:after {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+.radio-custom .checkmark {
+    @include radius(50%);
+}
+
+// Checkbox and Radio - sizes
+.checkbox-custom,
+.radio-custom {
+
+    // Size Small
+    &.sm {
+        font-size: 13px;
+        line-height: 1.3;
+    }
+
+    // Size Large
+    &.lg {
+        min-height: 24px;
+        min-width: 24px;
+        padding-left: 36px;
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba($secondary, 0.5);
+    
+        .checkmark {
+            height: 24px;
+            width: 24px;
+            border-width: 2px;
+
+            &:after {
+                left: calc(50% - 6px);
+                top: calc(50% - 6px);
+                width: 12px;
+                height: 12px;
+            }
+        }
+
+        input {
+    
+            &:checked {
+    
+                & ~ p {
+                    color: $secondary;
+                }
+            }
+        }
+    }
+}
+.checkbox-custom.lg .checkmark {
+    @include radius(6px);
+}
+
+// Checkbox and Radio - Inside modals
+.modal {
+
+    .checkbox-custom,
+    .radio-custom {
+        font-size: 13px;
+        line-height: 1.3;
+    }
+}
+
+// Checkbox and Radio - Inside Test
+.test__item-answers {
+
+    // Checkbox
+    .checkbox-custom,
+    .radio-custom {
+        min-height: 24px;
+        min-width: 24px;
+        padding-left: 32px;
+        font-size: 18px;
+        line-height: 22px;
+        color: rgba($secondary, 0.5);
+    
+        .checkmark {
+            height: 24px;
+            width: 24px;
+            border-width: 2px;
+
+            &:after {
+                left: calc(50% - 6px);
+                top: calc(50% - 6px);
+                width: 12px;
+                height: 12px;
+            }
+        }
+
+        input {
+    
+            &:checked {
+    
+                & ~ p {
+                    color: $secondary;
+                }
+            }
+        }
+    }
+
+    .checkbox-custom .checkmark {
+        @include radius(6px);
+    }
+}

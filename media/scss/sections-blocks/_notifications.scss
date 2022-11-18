@@ -1,0 +1,31 @@
+// Section & Block - Notifications
+
+.notification-card {
+
+    &:not(:last-child) {
+        margin-bottom: 25px;
+    }
+
+    .notification {
+        display: flex;
+
+        &:not(:last-child) {
+            margin-bottom: 18px;
+        }
+    
+        .icon {
+            font-size: 15px;
+            margin: 5px 14px 0 0;
+        }
+
+        p {
+            font-weight: 500;
+            margin: 0;
+    
+            strong {
+                color: $secondary;
+                font-weight: 500;
+            }
+        }
+    }
+}

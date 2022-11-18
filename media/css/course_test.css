@@ -1,0 +1,80 @@
+.faqs1 {
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 13px;
+}
+.faqs1 > h3 {
+  text-align: center;
+}
+.faq-heading {
+  border-bottom: #777;
+}
+.faq-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0;
+}
+.hr-line {
+  width: 0%;
+  margin: auto;
+}
+/* Style the buttons that are used to open and close the faq-page body */
+.faq-page {
+  /* background-color: #eee; */
+  color: white;
+  cursor: pointer;
+  padding: 30px 20px;
+  width: 90%;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  margin: auto;
+}
+.faq-body {
+  margin: auto;
+  /* text-align: center; */
+  width: 90%;
+}
+.active,
+.faq-page:hover {
+  background: transparent;
+}
+/* Style the faq-page panel. Note: hidden by default */
+.faq-body {
+  padding: 0 18px;
+  background: transparent;
+  display: none;
+  overflow: hidden;
+}
+.faq-page:after {
+  content: "\02795";
+  /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+.active:after {
+  content: "\2796";
+  /* Unicode character for "minus" sign (-) */
+}
+#google_translate_element {
+  width: 200px;
+  margin: 5rem 0;
+}
+.goog-logo-link {
+  display: none !important;
+}
+
+.goog-te-gadget {
+  color: transparent !important;
+}
+
+@media screen and (max-width: 1024px) {
+  /* ====================== FAQs ===================== */
+
+  .faq {
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,125 @@
+// Section & Block - Qualification
+
+.qualification-progress {
+
+    .row {
+        margin-left: -12px;
+        margin-right: -12px;
+
+        .col {
+            padding-left: 12px;
+            padding-right: 12px;
+
+            &:nth-child(1) {
+                width: 100%;
+            }
+
+            &:nth-child(2) {
+                width: auto;
+                flex: 0 0 auto;
+            }
+        }
+    }
+
+    .btn {
+        width: 100%;
+        font-size: 16px;
+        font-weight: 500;
+        padding-left: 16px;
+        padding-right: 16px;
+
+        .icon {
+            margin-right: 6px;
+        }
+    }
+}
+
+.qualification-type {
+
+    .circle-progress-bar {
+        margin-right: 10px;
+    }
+
+    &__caption {
+
+        a {
+            display: block;
+            margin-bottom: 4px;
+            color: $secondary;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 500;
+            @include transition();
+
+            &:hover {
+                color: $primary;
+                text-decoration: none;
+            }
+
+            &:after {
+                content: "\e904";
+                font-family: 'icomoon';
+                font-size: 10px;
+                margin-left: 6px;
+            }
+        }
+
+        p {
+            margin: 0;
+            font-size: 13px;
+            line-height: 18px;
+        }
+    }
+}
+
+.qualification-time {
+
+    .card-body {
+        padding: 14px 16px;
+
+        @include media-breakpoint-up(xl) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 22px;
+            color: $secondary;
+            margin: 0 30px 0 0;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+
+        @include media-breakpoint-down(lg) {
+            margin-top: 20px;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            margin-right: 30px;
+            font-size: 16px;
+            white-space: nowrap;
+
+            .icon {
+                font-size: 20px;
+                margin-right: 5px;
+            }
+        }
+
+        .btn {
+            width: 100px;
+            padding-left: 10px;
+            padding-right: 10px;
+            overflow: hidden;
+            font-size: 16px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+}

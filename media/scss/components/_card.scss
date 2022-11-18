@@ -1,0 +1,16 @@
+// Component - Cards
+
+.card {
+    margin-bottom: 30px;
+
+    .card-header {
+        font-weight: 500;
+        color: #252A3B;
+        background-color: #FFF;
+        border-bottom: 1px solid rgba($light, 0.2);
+    }
+
+    &.card--shadow {
+        box-shadow: 0 7.3px 29px rgba(#000, 0.05);
+    }
+}

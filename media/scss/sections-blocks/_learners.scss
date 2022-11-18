@@ -1,0 +1,33 @@
+// Section & Block - Learners
+
+.section-learners {
+    padding-top: 70px;
+    padding-bottom: 80px;
+    background-color: rgba($light, 0.06);
+
+    .title {
+        
+        h3 {
+
+            span {
+                color: $primary;
+                vertical-align: -1px;
+                display: inline-block;
+
+                &:nth-child(n) {
+                    margin-right: 5px;
+                }
+
+                &:nth-child(n) {
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+
+    img {
+        width: 1170px;
+        height: auto;
+    }
+}
+

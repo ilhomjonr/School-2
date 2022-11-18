@@ -1,0 +1,62 @@
+// Components - Owl carousel
+
+.owl-slider {
+    position: relative;
+    padding: 0 90px;
+
+    @include media-breakpoint-down(xs) {
+        padding: 0 60px;
+    }
+}
+
+.owl-nav {
+
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        padding: 0;
+        background-color: $light;
+        border: none;
+        box-shadow: none;
+        position: absolute;
+        top: calc(50% - 18px);
+        outline: none;
+        @include radius(50%);
+        @include transition();
+
+        &:hover {
+            background-color: $primary;
+        }
+
+        &:before {
+            color: #FFF;
+            font-size: 15px;
+            font-family: 'icomoon';
+        }
+
+        &.owl-prev {
+            left: 0;
+
+            &:before {
+                content: "\e903";
+                margin-right: 2px;
+            }
+        }
+
+        &.owl-next {
+            right: 0;
+
+            &:before {
+                content: "\e904";
+                margin-left: 2px;
+            }
+        }
+
+        span {
+            display: none;
+        }
+    }
+}

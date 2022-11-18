@@ -1,0 +1,279 @@
+// Section & Block - Webinars
+
+// Card
+.webinar {
+    margin-bottom: 30px;
+
+    &__header {
+        position: relative;
+        margin-bottom: 15px;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            @include radius(25px);
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .webinar__info {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 134px 24px 24px 24px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, rgba(51, 51, 51, 0) 0%, rgba(51, 51, 51, 0.3) 100%);
+        
+            .badge {
+                display: flex;
+                align-items: center;
+                color: $light;
+                font-weight: 500;
+                font-size: 14px;
+                padding: 9px 13px;
+                margin-right: 24px;
+                background-color: #FFF;
+                @include radius(10px);
+        
+                .icon {
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+
+    &__body {
+        margin-bottom: 15px;
+
+        a {
+            font-weight: 500;
+            color: #252A3B;
+            @include transition();
+
+            &:hover, &:focus {
+                color: $secondary;
+                text-decoration: none;
+            }
+        }
+
+        strong {
+            font-size: 16px;
+            font-weight: 500;
+            color: #252A3B;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+
+        .btn {
+            width: calc(50% - 11px);
+            min-width: calc(50% - 11px);
+            padding: 12px;
+            font-size: 19px;
+            font-weight: 500;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            .icon {
+                margin-right: 7px;
+            }
+        }
+    }
+}
+
+// Details
+.webinar-details {
+
+    .webinar-col-1 {
+
+        @include media-breakpoint-up(lg) {
+            width: 70%;
+            min-width: 70%;
+            flex: 0 0 70%;
+        }
+    }
+
+    .webinar-col-2 {
+
+        @include media-breakpoint-up(lg) {
+            width: 30%;
+            min-width: 30%;
+            flex: 0 0 30%;
+        }
+    }
+
+    &__card {
+        overflow: hidden;
+        background-color: #FFF;
+        box-shadow: 0 8px 16px rgba($secondary, 0.05);
+        margin-bottom: 30px;
+        @include radius(10px);
+
+        img {
+            display: block;
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+
+            @include media-breakpoint-down(sm) {
+                height: 280px;
+            }
+        }
+
+        &-caption {
+            padding: 16px;
+
+            p {
+                font-size: 14px;
+                margin: 0;
+
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+
+                .icon {
+                    font-size: 16px;
+                    vertical-align: -3px;
+                    margin-right: 5px;
+                }
+            }
+
+            .btn {
+                width: 100%;
+                height: 32px;
+                padding: 7px;
+                margin-top: 16px;
+
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 14px;
+
+                .icon {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+.webinar-dashboard {
+    display: flex;
+    margin-bottom: 24px;
+    overflow: hidden;
+    @include radius(10px);
+
+    @include media-breakpoint-down(sm) {
+        flex-direction: column;
+    }
+
+    &__image {
+
+        img {
+            display: block;
+
+            @include media-breakpoint-up(md) {
+                width: 170px;
+                min-width: 170px;
+                height: 100%;
+                min-height: 100px;
+                object-fit: cover;
+            }
+
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__caption {
+        background-color: #FFF;
+        padding: 16px 24px;
+
+        @include media-breakpoint-up(xl) {
+            display: flex;
+            align-items: center;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding: 15px;
+        }
+    }
+
+    &__body {
+
+        @include media-breakpoint-up(xl) {
+            margin-right: 24px;
+        }
+
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 15px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 0;
+        }
+
+        a {
+            font-weight: 500;
+            color: #252A3B;
+            @include transition();
+
+            &:hover, &:focus {
+                color: $secondary;
+                text-decoration: none;
+            }
+        }
+
+        strong {
+            font-size: 16px;
+            font-weight: 500;
+            color: #252A3B;
+        }
+
+        .webinar__info {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-top: 4px;
+            font-size: 14px;
+
+            .icon {
+                font-size: 16px;
+                margin-right: 8px;
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+
+        @include media-breakpoint-down(sm) {
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 6px 10px;
+            font-size: 14px;
+            font-weight: 500;
+            @include radius(10px);
+
+            @include media-breakpoint-down(sm) {
+                margin-top: 15px;
+            }
+            
+            &:not(:last-child) {
+                margin-right: 16px;
+            }
+
+            .icon {
+                margin-right: 7px;
+            }
+        }
+    }
+}

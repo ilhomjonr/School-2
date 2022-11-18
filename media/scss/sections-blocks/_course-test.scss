@@ -1,0 +1,175 @@
+// Section & Block - Dashboard Course Test
+
+.test {
+
+    .card-body {
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+    
+    &__pagination {
+        margin-bottom: 24px;
+        overflow-x: scroll;
+        
+        ul {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+
+                &:not(:last-child) {
+                    border-right: 1px solid #E6E8F1;
+                }
+
+                a {
+                    display: block;
+                    width: 71px;
+                    min-width: 71px;
+                    padding: 5px 0;
+                    color: $secondary;
+                    font-size: 18px;
+                    font-weight: 500;
+                    text-align: center;
+
+                    &:hover, &:focus {
+                        text-decoration: none;
+                    }
+                }
+
+                &:first-child {
+
+                    a {
+                        @include radius(10px);
+                        border-top-right-radius: 0;
+                        border-bottom-right-radius: 0;
+                    }
+                }
+
+                &:last-child {
+
+                    a {
+                        @include radius(10px);
+                        border-top-left-radius: 0;
+                        border-bottom-left-radius: 0;
+                    }
+                }
+
+                &.passed {
+
+                    a {
+                        background-color: #FFF;
+                    }
+                }
+
+                &.current {
+
+                    a {
+                        color: #FFF;
+                        background-color: $light;
+                    }
+                }
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        &-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 6px;
+            color: $light;
+
+            &:hover, &:focus {
+                color: $secondary;
+                text-decoration: none;
+            }
+
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+
+            .icon {
+                font-size: 20px;
+                margin-right: 10px;
+            }
+    
+            strong {
+                font-size: 18px;
+                font-weight: 500;
+
+                span {
+                    margin-right: 15px;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+
+    &__item {
+        margin-bottom: 24px;
+
+        &-question {
+            color: $secondary;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 30px;
+            margin-bottom: 30px;
+        }
+
+        &-answers {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+                display: flex;
+
+                &:not(:last-child) {
+                    margin-bottom: 24px;
+                }
+
+                p {
+
+                    span {
+                        margin-right: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.course-single__content {
+
+    .test {
+
+        .card {
+            background-color: rgba($light, 0.08);
+        }
+
+        .test__pagination ul li {
+
+            &.passed {
+
+                a {
+                    background-color: rgba($light, 0.08);
+                }
+            }
+
+            &.current {
+
+                a {
+                    color: #FFF;
+                    background-color: $light;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+// Components - Titles
+
+.title {
+    margin-bottom: 40px;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+    p {
+        margin: 15px 0 0 0;
+        font-size: 18px;
+    }
+
+    br {
+
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
+    }
+}

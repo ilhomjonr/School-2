@@ -1,0 +1,170 @@
+// Section & Block - Sortable
+
+.sortable {
+
+    .move {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 40px;
+        height: 40px;
+        color: rgba($light, 0.4);
+        cursor: move;
+    }
+
+    .buttons {
+        display: flex;
+        padding-right: 8px;
+        background: #f6f6f8;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 40px;
+            padding: 0;
+            font-size: 14px;
+            border: 0;
+            outline: none;
+            background: none;
+            @include transition();
+
+            &:hover, &:focus {
+                opacity: 0.5;
+            }
+
+            .icon-edit {
+                color: $primary;
+            }
+
+            .icon-remove {
+                color: #EB5757;
+            }
+        }
+    }
+
+    input[type="text"] {
+        box-shadow: none;
+    }
+
+    .clmn-1 {
+        display: flex;
+        width: 100%;
+        position: relative;
+
+        input[type="text"] {
+            padding-left: 56px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+    
+            @include media-breakpoint-down(sm) {
+                padding-left: 40px;
+            }
+        }
+    }
+
+    .clmn-2 {
+        width: 87px;
+        margin-left: 16px;
+
+        input[type="text"] {
+            height: 32px;
+            padding: 7px 16px;
+            font-size: 12px;
+        }
+    }
+
+    .group-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 0 0 56px;
+        padding-bottom: 15px;
+
+        @include media-breakpoint-down(sm) {
+            margin-left: 30px;
+        }
+
+        &__add {
+            color: rgba($light, 0.8);
+            font-weight: 500;
+
+            &:hover {
+                color: $light;
+                text-decoration: none;
+            }
+    
+            .icon {
+                font-size: 12px;
+                margin-right: 10px;
+            }
+        }
+
+        &__info {
+            margin: -8px 0;
+        }
+    }
+
+    .movable-placeholder {
+        height: 800px;
+        margin-bottom: 8px;
+        border: 1px dashed rgba($light, 0.3);
+        background: rgba($light, 0.2);
+        @include radius(8px);
+    }
+    
+    .ui-sortable-helper {
+        @include radius(8px);
+        box-shadow: 0 0 5px rgba(#000, 0.3);
+    }
+
+    .group-caption {
+        position: relative;
+        margin-bottom: 10px;
+    }
+    
+    .group-parent {
+        display: flex;
+    }
+    
+    .group-items {
+        padding-bottom: 25px;
+    }
+    
+    .group-item {
+        display: flex;
+        position: relative;
+        margin-left: 56px;
+        margin-top: 8px;
+    
+        @include media-breakpoint-down(sm) {
+            margin-left: 30px;
+        }
+    
+        .move {
+            height: 32px;
+        }
+    
+        .buttons {
+    
+            .button {
+                height: 32px;
+            }
+        }
+    
+        input[type="text"] {
+            width: 100%;
+            height: 32px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            font-size: 12px;
+        }
+    }
+}

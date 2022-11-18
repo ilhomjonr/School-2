@@ -1,0 +1,43 @@
+// Config - Variables
+
+$body-bg:               #fff;
+
+// Font family
+$font-family-base: 	    'Cera Pro';
+
+// Color
+$primary:               #26CAAC;
+$secondary:             #0D2E69;
+$secondary-light:       #eceff3;
+$success:               #53C22B;
+$danger:                #FF0000;
+$danger-light:          #FF5953;
+$info:                  #3C8E9D;
+$dark:                  #1D262D;
+
+$light:                 #898DA6;
+$lighter:               #d0d2db;
+$lightest:              #dfe0e5;
+
+$whiter:                #f6f6f8;
+$white:                 #FFFFFF;
+
+// Text color
+$body-color:            $light;
+$color-link:            $primary;
+$color-link-hover:      $primary;
+
+// Forms
+$input-border-color:    red;
+
+// Other colors
+$color-placeholder:     #7B7B7B;
+$color-border:          #CED3D9;
+
+// Folder path
+$path-images: '../images';
+$path-fonts: '../fonts';
+
+
+$custom-select-indicator:           url("#{$path-images}/icons/arrow-down.svg");
+// $custom-select-background:          escape-svg($custom-select-indicator) no-repeat right $custom-select-padding-x center / $custom-select-bg-size !default; // Used so we can have multiple background elements (e.g., arrow and feedback icon)

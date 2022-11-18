@@ -1,0 +1,80 @@
+// Base - Footer
+
+.footer {
+    background-color: rgba($light, 0.06);
+
+    &__top {
+        padding-top: 60px;
+
+        @include media-breakpoint-down(sm) {
+            padding-top: 30px;
+        }
+    }
+
+    &__bottom {
+        border-top: 1px solid rgba($light, 0.15);
+    }
+}
+
+.footer__column {
+    margin-bottom: 60px;
+
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 30px;
+    }
+
+    strong {
+        display: block;
+        color: $secondary;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 10px;
+        }
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+
+            &:not(:last-child) {
+                margin-bottom: 22px;
+
+                @include media-breakpoint-down(sm) {
+                    margin-bottom: 10px;
+                }
+            }
+
+            a {
+                color: $light;
+                font-weight: 500;
+
+                &:hover, &:focus {
+                    color: $secondary;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.footer__logo {
+    width: 100%;
+    max-width: 220px;
+    object-fit: contain;
+}
+
+.copyright {
+    padding: 32px 0;
+
+    p {
+        margin: 0;
+        color: $secondary;
+        text-align: center;
+    }
+}

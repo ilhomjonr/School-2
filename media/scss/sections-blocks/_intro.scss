@@ -1,0 +1,70 @@
+// Section & Block - Intro
+
+.section-intro {
+    padding-top: 55px;
+    padding-bottom: 0;
+    background-color: #FFF;
+
+    &__inner {
+
+        @include media-breakpoint-up(xl) {
+            padding: 0 80px;
+        }
+    }
+
+    .col {
+
+        &:first-child {
+            width: 54%;
+            min-width: 54%;
+
+            @include media-breakpoint-down(lg) {
+                width: 55%;
+                min-width: 55%;
+            }
+
+            @include media-breakpoint-down(md) {
+                width: 100%;
+                min-width: 100%;
+            }
+        }
+
+        &:last-child {
+            width: 46%;
+            min-width: 46%;
+
+            @include media-breakpoint-down(lg) {
+                width: 45%;
+                min-width: 45%;
+            }
+
+            @include media-breakpoint-down(md) {
+                width: 100%;
+                min-width: 100%;
+            }
+        }
+    }
+
+    h1 {
+        margin-bottom: 10px;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 30px;
+            line-height: 1.2;
+        }
+    }
+
+    p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    img {
+        width: 100%;
+
+        @include media-breakpoint-up(lg) {
+            width: calc(100% + 80px);
+            margin-left: -80px;
+        }
+    }
+}
